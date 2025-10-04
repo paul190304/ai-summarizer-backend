@@ -1,0 +1,32 @@
+.summarizer-container {
+  background: var(--card-background); padding: 40px; border-radius: 20px;
+  backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center; width: 100%; max-width: 600px;
+}
+.summarizer-container h1 { margin-bottom: 30px; }
+.summarizer-container form { display: flex; flex-direction: column; gap: 20px; }
+.drop-area {
+  border: 2px dashed rgba(255, 255, 255, 0.4); border-radius: 10px; padding: 40px;
+  cursor: pointer; transition: background-color 0.3s;
+}
+.drop-area:hover { background-color: rgba(255, 255, 255, 0.1); }
+#file-input { display: none; }
+.summarizer-container button {
+  padding: 15px; border-radius: 8px; border: none; background: var(--primary-color);
+  color: white; font-size: 16px; font-weight: 600; cursor: pointer;
+}
+.summarizer-container button:disabled { background: #555; cursor: not-allowed; }
+.processing-animation { font-size: 80px; margin-top: 40px; }
+.result-box { margin-top: 30px; text-align: left; min-height: 200px; position: relative; }
+.countdown {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-size: 100px; font-weight: 600; color: var(--primary-color);
+}
+.summary-content, .error-content {
+  background-color: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 15px;
+  white-space: pre-wrap; line-height: 1.6;
+}
+.error-content {
+  background-color: rgba(255, 82, 82, 0.1); color: #ff5252;
+  border: 1px solid #ff5252;
+}
